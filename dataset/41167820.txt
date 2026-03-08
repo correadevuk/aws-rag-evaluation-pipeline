@@ -1,0 +1,7 @@
+Title: Imaging of Discogenic and Vertebrogenic Pain.
+
+Journal: Neurosurgery clinics of North America
+Year: 2025
+PMID: 41167820
+
+Chronic low back pain is a major source of pain and disability globally involving multifactorial causes. Historically, intervertebral disc degeneration and disruption have been associated as primary back pain triggers of the anterior column, termed "discogenic pain." Recently, the vertebral endplates have been identified as another possible pain trigger of the anterior column. This "endplate-driven" model, defined "vertebrogenic pain," is often interconnected with disc degeneration. Diagnosis of vertebrogenic and discogenic pain relies on imaging techniques that isolate pain generators and exclude comorbid conditions. Traditional methods, like radiographs and discography, are augmented by more sensitive methods, including SPECT, CT, and MRI. Morphologic MRI is pivotal in revealing indicators of vertebrogenic (eg, Modic endplate changes) and discogenic pain (eg, disc degeneration and annular fissures). More advanced methods, like ultra-short-echo time imaging, and quantitative MRI further amplify MRI's accuracy in the detection of painful endplate and disc pathology. This review explores the pathophysiology of vertebrogenic and discogenic pain as well as the impact of different imaging modalities in the diagnosis of low back pain. We hope this information can help identify patients who may benefit from personalized clinical treatment and image-guided therapies.

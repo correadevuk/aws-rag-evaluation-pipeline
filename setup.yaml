@@ -1,0 +1,127 @@
+# setup.yaml — CloudFormation template
+AWSTemplateFormatVersion: '2010-09-09'
+Description: |
+  CLBP RAG pipeline infrastructure. Provisions the S3 data source bucket and IAM role required for Amazon Bedrock Knowledge Bases, plus S3 Vectors resources used as the vector store for the knowledge base.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Default: clbp-rag
+
+Resources:
+
+  # S3 bucket — raw document data source (.txt + .metadata.json files)
+  DataSourceBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${ProjectName}-datasource-${AWS::AccountId}
+
+  # IAM role — Bedrock assumes this to read from S3 during sync
+  BedrockKBRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${ProjectName}-bedrock-kb-role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: bedrock.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: BedrockKBPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:ListBucket
+                Resource:
+                  - !GetAtt DataSourceBucket.Arn
+                  - !Sub ${DataSourceBucket.Arn}/*
+              - Effect: Allow
+                Action:
+                  - s3vectors:CreateVectorBucket
+                  - s3vectors:CreateIndex
+                  - s3vectors:GetVectors
+                  - s3vectors:PutVectors
+                  - s3vectors:QueryVectors
+                  - s3vectors:GetIndex
+                  - s3vectors:GetVectorBucket
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                Resource: '*'
+
+  # S3 Vectors storage resources used by Bedrock Knowledge Base
+  VectorBucket:
+    Type: AWS::S3Vectors::VectorBucket
+    Properties:
+      VectorBucketName: !Sub ${ProjectName}-vectors-${AWS::AccountId}
+
+  VectorIndex:
+    Type: AWS::S3Vectors::Index
+    Properties:
+      VectorBucketArn: !Ref VectorBucket
+      IndexName: !Sub ${ProjectName}-index
+      DataType: float32
+      Dimension: 1024
+      DistanceMetric: cosine
+      MetadataConfiguration:
+        # Required for Bedrock Knowledge Bases with S3 Vectors.
+        # Bedrock stores chunk text and Bedrock-managed metadata under these keys,
+        # and they must be marked as non-filterable or ingestion can fail with the
+        # S3 Vectors 2 KB filterable metadata limit.
+        NonFilterableMetadataKeys:
+          - AMAZON_BEDROCK_TEXT
+          - AMAZON_BEDROCK_METADATA
+
+  # Bedrock Knowledge Base
+  KnowledgeBase:
+    Type: AWS::Bedrock::KnowledgeBase
+    Properties:
+      Name: !Sub ${ProjectName}-kb
+      RoleArn: !GetAtt BedrockKBRole.Arn
+      KnowledgeBaseConfiguration:
+        Type: VECTOR
+        VectorKnowledgeBaseConfiguration:
+          EmbeddingModelArn: !Sub arn:aws:bedrock:${AWS::Region}::foundation-model/amazon.titan-embed-text-v2:0
+          EmbeddingModelConfiguration:
+            BedrockEmbeddingModelConfiguration:
+              Dimensions: 1024
+              EmbeddingDataType: FLOAT32
+      StorageConfiguration:
+        Type: S3_VECTORS
+        S3VectorsConfiguration:
+          IndexArn: !Ref VectorIndex
+
+  # Data source — connects the KB to the S3 bucket
+  KBDataSource:
+    Type: AWS::Bedrock::DataSource
+    Properties:
+      KnowledgeBaseId: !Ref KnowledgeBase
+      Name: !Sub ${ProjectName}-datasource
+      DataDeletionPolicy: RETAIN
+      DataSourceConfiguration:
+        Type: S3
+        S3Configuration:
+          BucketArn: !GetAtt DataSourceBucket.Arn
+
+Outputs:
+  KnowledgeBaseId:
+    Value: !Ref KnowledgeBase
+    Description: Bedrock Knowledge Base ID — use this in rag_query.py
+  VectorBucketArn:
+    Value: !Ref VectorBucket
+    Description: S3 Vectors bucket ARN used by the knowledge base
+  VectorIndexArn:
+    Value: !Ref VectorIndex
+    Description: S3 Vectors index ARN used by the knowledge base
+  DataSourceBucketName:
+    Value: !Ref DataSourceBucket
+    Description: Upload your clbp_docs/ files here before syncing
+  DataSourceId:
+    Value: !Ref KBDataSource
+    Description: Data source ID — needed to trigger the ingestion sync

@@ -1,0 +1,7 @@
+Title: What a pain in the back: etiology, diagnosis and future treatment directions for discogenic low back pain.
+
+Journal: Bone research
+Year: 2025
+PMID: 41120264
+
+Chronic lower back pain (LBP) is the leading cause of disability worldwide. Due to its close relationship with intervertebral disc (IVD) degeneration (IVDD), research has historically focused more on understanding the mechanism behind IVDD while clinical efforts prioritize pain management. More recently, there has been a shift toward understanding LBP as a distinct pathological entity. This review synthesizes current knowledge on discogenic LBP, combining known pathophysiology, molecular mechanisms, risk factors, diagnostic challenges, and available experimental models. IVDD is a complex, multifactorial process involving biochemical, mechanical, and inflammatory changes within the disc, leading to structural breakdown and potential discogenic pain. Key mechanisms include extracellular matrix degradation, upregulation of inflammatory mediators, immune cell infiltration, and aberrant nerve and vascular ingrowth. However, not all cases of IVDD result in LBP, highlighting the need for further investigation into the cellular, molecular, and biomechanical factors contributing to symptom development. Current diagnostic tools and experimental models for studying discogenic LBP remain limited, impeding the development of targeted treatments. Existing therapies primarily focus on symptom management rather than addressing underlying disease mechanisms.

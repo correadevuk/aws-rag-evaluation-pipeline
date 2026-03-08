@@ -1,0 +1,7 @@
+Title: Influence of patient-reported outcomes on the effect of exercise therapy, manual therapy, and kinesiotaping in chronic low back pain: secondary statistical analysis.
+
+Journal: Scientific reports
+Year: 2025
+PMID: 41184444
+
+To evaluate the relationship between pain catastrophizing, treatment modality, pain intensity, and functional disability in patients with chronic lower back pain, while also accounting for the effects of kinesiophobia and self-efficacy using generalized linear mixed models. Secondary analysis of a randomized controlled trial. Outpatient clinical setting. Forty-eight adults with chronic low back pain participated in the study. Participants were randomized into three intervention groups receiving therapeutic exercise (ET) either alone, combined with manual therapy (ET

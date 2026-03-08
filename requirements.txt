@@ -1,0 +1,8 @@
+# rag_query.py
+boto3
+
+# ragas_eval.py
+ragas
+pandas
+openpyxl
+langchain-aws

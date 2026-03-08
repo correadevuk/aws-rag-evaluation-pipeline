@@ -1,0 +1,7 @@
+Title: Efficacy of manual therapy on central sensitization in subjects with chronic low back pain: A systematic review and meta-analysis.
+
+Journal: Journal of bodywork and movement therapies
+Year: 2025
+PMID: 40954646
+
+The present study aims to determine the effects of joint manual therapy (MT) on central sensitization (CS) in individuals with Chronic low back pain (CLBP). A systematic search was performed in PubMed, Scopus, ScienceDirect, Embase/Ovid, CINHAL, CENTRAL, Web of Science and PEDRO, clinicaltrials.gov, and ICTRP. All studies included the effect of joint MT on CS in various people with CLBP. The assessment of quality and data synthesis was completed. Standardized mean difference and 95 % confidence intervals were used to conduct a meta-analysis. The systematic review and meta-analysis revealed a small overall effect size of 0.01 (95 % CI: -0.27 to 0.29), indicating a negligible impact of joint MT on CS in individuals with CLBP. A small but significant effect (SMD:0.31 (95 % CI: 0.00, 0.63)) of MT was observed on peripheral sensitization. No significant effect of MT was observed on pressure pain thresholds on various body areas, TS or CPM. Therefore, the neurophysiological effects of joint MT on CS remain unclear. Further research to needed, utilizing a variety of measures to understand the role of MT in managing CS symptoms in individuals with CLBP.

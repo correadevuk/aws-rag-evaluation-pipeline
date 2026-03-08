@@ -1,0 +1,7 @@
+Title: Effects of different modes of exercise on sleep quality in adults with chronic low back pain: a randomised controlled trial.
+
+Journal: Sleep medicine
+Year: 2025
+PMID: 41067033
+
+Evidence suggests an association between sleep and chronic low back pain. However, the effects of exercise training (first-line treatment) on sleep in this susceptible population group has received limited attention to date. This two-group parallel (1:1) randomised controlled trial (ACTRN12615001270505) allocated 40 adults with non-specific chronic low back pain to six months of either general strength and conditioning (n = 20) or motor control and manual therapy (n = 20). Sleep quality and sub-components were measured by the Pittsburgh Sleep Quality Index. Both general strength and conditioning (β [95 %CI]: 1.58 [-2.70, -0.46]) and motor control and manual therapy (β [95 %CI]: 1.61 [-2.79, -0.43]) improved sleep quality, but there was no between-group difference (β [95 %CI]: 0.03 [-1.60, 1.65]). For sleep quality sub-components, general strength and conditioning improved daytime dysfunction (β [95 %CI]: 0.33 [-0.65, -.0.01]), but led to a decline in sleep efficiency (β [95 %CI]: 0.06 [0.01, 0.10]). Motor control and manual therapy improved sleep disturbance (β [95 %CI]: 0.31 [-0.55, -0.07]). Both interventions improved sleep quality and some sub-components. Future studies could include a true control, objective sleep measures, and investigation of potential mediators.

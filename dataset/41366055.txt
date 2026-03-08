@@ -1,0 +1,7 @@
+Title: Randomized open-label non-inferiority trial of paracetamol or celecoxib for patients with chronic low back pain.
+
+Journal: Scientific reports
+Year: 2025
+PMID: 41366055
+
+Pharmacological treatment is commonly used for patients with chronic low back pain (CLBP). However, very low-quality evidence exists for paracetamol as a treatment option for CLBP; therefore, recommendations are contradictory among the guidelines. This randomized controlled study aimed to compare the analgesic effects of paracetamol and celecoxib in a non-inferiority trial. This non-inferiority trial tested the hypothesis that paracetamol is as effective as celecoxib for the treatment of CLBP within a pre-specified non-inferiority margin. One hundred fifty-six patients with CLBP were considered eligible and randomly allocated to a group receiving paracetamol or celecoxib. The pain intensity was measured using a numerical rating scale as the primary outcome. Secondary outcomes were pain-related psychological variables, quality of life, and adverse events. One hundred thirty-nine patients completed the study (paracetamol, 70; celecoxib, 69). We observed that the mean differences in the NRS changes between the two medication groups from baseline to weeks two and four did not significantly exceed the non-inferiority margin. Paracetamol had a superior effect on pain-related psychological variables and quality of life compared to celecoxib. These results suggest that paracetamol provides analgesic effects comparable to celecoxib for CLBP, meeting the criteria for non-inferiority.

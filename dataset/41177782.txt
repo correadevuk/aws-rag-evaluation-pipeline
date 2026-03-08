@@ -1,0 +1,7 @@
+Title: Modic changes and their role in vertebrogenic back pain: a literature review.
+
+Journal: Skeletal radiology
+Year: 2026
+PMID: 41177782
+
+Vertebrogenic back pain (VBP) has emerged as a potentially undiagnosed subtype of chronic low back pain that is thought to arise from structural damage and subsequent inflammatory changes in the vertebral endplates and bone marrow. Modic changes (MCs) found on MRI have been proposed to be a potential indicator for VBP. However, the pathophysiology and clinical basis for MCs are still being investigated. This literature review aims to comprehensively synthesize the available evidence on the pathogenesis, etiologies, and therapeutic outcomes associated with MCs. MCs are classified into three types based on MRI characteristics, with the potential to present with mixed types or to interconvert over time. Risk factors and hypotheses include mechanical disruption, inflammation, bacterial, and autoimmune etiologies increasingly linked to nociceptive signaling from the basivertebral nerve (BVN), causing VBP. Diagnostic and criteria standardization is a major gap for further research to produce more consistent therapeutic outcomes. Future directions with biomarkers, advanced emerging imaging techniques, and clinical translation are required to refine the clinical role of MCs in diagnosing and managing VBP.

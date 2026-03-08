@@ -1,0 +1,7 @@
+Title: Acute Low Back Pain: Diagnosis and Management.
+
+Journal: American family physician
+Year: 2025
+PMID: 41252835
+
+Acute low back pain falls into two causal categories: specific and nonspecific. Specific causes can be intrinsic to the spine, from systemic disease, or referred pain from other organs. However, acute low back pain typically is nonspecific. Aside from recent trauma, most patients with acute low back pain do not require imaging unless history reveals red flag findings. Those with red flag findings require immediate evaluation and treatment, including imaging and specialty referral or consultation. For patients with nonspecific low back pain, first-line treatment involves maintaining activity, use of heat therapy, and other nonpharmacologic treatments (eg, dry needling, transcutaneous electrical nerve stimulation, acupuncture). Pharmacotherapy options include nonsteroidal anti-inflammatory drugs, trigger point injections, and possibly systemic corticosteroids for radicular low back pain. Drugs that should not routinely be used include benzodiazepines, gabapentin, pregabalin, opioids, and acetaminophen. Physicians should address comorbid conditions that increase the risk of acute low back pain becoming chronic. Patients with pain persisting beyond 8 weeks despite appropriate therapy should be considered for imaging and laboratory evaluation to identify specific causes.
