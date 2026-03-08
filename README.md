@@ -8,7 +8,44 @@ This repository accompanies the blog post [Build a RAG Evaluation Pipeline Using
 
 ## Architecture Overview
 
-![RAG Evaluation Pipeline Architecture](rag_evaluation_pipeline.png)
+```mermaid
+flowchart TD
+    subgraph infra["setup.yaml — AWS CloudFormation"]
+        S3[Amazon S3\nData Source Bucket]
+        IAM[IAM Role\nBedrock permissions]
+        KB[Amazon Bedrock\nKnowledge Base]
+        TITAN[Amazon Titan\nEmbed Text v2\n1024-dim]
+        S3V[Amazon S3 Vectors\nVector bucket + index]
+        IAM --> KB
+        KB --> TITAN --> S3V
+        S3 --> KB
+    end
+
+    subgraph ingest["sync_kb_ingestion.sh"]
+        UPLOAD[Upload dataset/ to S3\n.txt + .metadata.json] --> SYNC[Start ingestion job]
+    end
+    UPLOAD --> S3
+    SYNC --> KB
+
+    subgraph query["rag_query.py"]
+        EVAL_DS[eval_dataset.json\n5 Q&A pairs] --> RETRIEVE
+        RETRIEVE[bedrock-agent-runtime\nretrieve · top 5 chunks] --> GENERATE[Amazon Nova Pro\namazon.nova-pro-v1:0]
+        GENERATE --> RAG_OUT[rag_results.json\nsemantic + filtered runs]
+    end
+    S3V --> RETRIEVE
+
+    subgraph evaluate["ragas_eval.py"]
+        RAG_IN[rag_results.json] --> JUDGE[Claude Sonnet 4.6\nRAGAS judge LLM]
+        EVAL_DS2[eval_dataset.json\nground truth] --> JUDGE
+        JUDGE --> SCORES[ragas_scores.xlsx\nfaithfulness · relevancy\nprecision · recall · correctness]
+    end
+    RAG_OUT --> RAG_IN
+
+    style infra fill:#f0f4ff,stroke:#336
+    style ingest fill:#f4fff0,stroke:#363
+    style query fill:#fff8f0,stroke:#663
+    style evaluate fill:#fff0f4,stroke:#633
+```
 
 ### Key Components
 
@@ -186,4 +223,4 @@ The script performs best-effort cleanup of the Bedrock data source, Knowledge Ba
 
 ## License
 
-This project is licensed under the MIT-0 License and is free to use, copy, and modify. See [LICENSE](LICENSE).
+This library is licensed under the MIT-0 License. See the LICENSE file.
