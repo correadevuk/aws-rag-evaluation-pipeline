@@ -4,7 +4,7 @@ This repository provides a complete RAG evaluation pipeline built on [Amazon Bed
 
 The domain is 95 peer-reviewed PubMed abstracts on chronic low back pain. Two retrieval modes are compared: semantic (full corpus) and metadata-filtered (2025 papers only). The evaluation produces a side-by-side score comparison exported to an Excel file.
 
-This repository accompanies the blog post [Build a RAG Evaluation Pipeline Using RAGAS with Amazon Bedrock Knowledge Bases and Amazon S3 Vectors](https://substack.com/@vcorreacom/note/p-190244021?r=7uj33o&utm_source=notes-share-action&utm_medium=web). Refer to the blog post for architecture decisions, metric analysis, and deeper implementation details.
+This repository accompanies the blog post [Build a RAG Evaluation Pipeline Using RAGAS with Amazon Bedrock Knowledge Bases and Amazon S3 Vectors](https://substack.com/home/post/p-190244021). Refer to the blog post for architecture decisions, metric analysis, and deeper implementation details.
 
 ## Architecture Overview
 
